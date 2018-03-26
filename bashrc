@@ -123,6 +123,9 @@ fi
 # tmux vim color
 export TERM="xterm-256color"
 
+# time out
+export TMOUT=0
+
 # my alias
 alias g1='cd ~/logging_for_multicores/mariadb/run/bin'
 alias g2='cd ~/mariadb_vanilla/mariadb_eleda/mariadb/run/bin'

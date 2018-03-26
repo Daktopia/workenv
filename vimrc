@@ -20,6 +20,8 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'shougo/vimshell.vim'
 
 
+Plugin 'valloric/youcompleteme'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -30,6 +32,13 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:vimshell_prompt_expr = 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
 let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
+
+
+
+" youcompleteme
+
+let g:ycm_python_binary_path = '/usr/bin/python3'
+
 
 
 
@@ -45,7 +54,9 @@ nmap <F4> :VimShellCreate<CR>
 map <C-o> :tabnew<CR>
 map <C-n> :tabn<CR>
 map <C-p> :tabp<CR>
-map <SPACE> :tabn<CR>
+map <SPACE> gt
+"map <S-SPACE> gT
+
 
 " split view
 map <TAB> <C-w><C-w>
