@@ -22,7 +22,7 @@ $(TARGET): $(OBJS) $(HDRS) makefile
 # compile an object based on source and headers
 bin/%.o: source/%.cpp $(HDRS) makefile
 	@mkdir -p bin
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
 
 
 
