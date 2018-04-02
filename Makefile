@@ -15,12 +15,12 @@ LIB = ./lib/ -lpthread
 CPPFLAGS += -I$(INC)
 
 # link it all together
-$(TARGET): $(OBJS) $(HDRS) makefile
+$(TARGET): $(OBJS) $(HDRS)
 	@mkdir -p bin
 	$(CC) $(CXXFLAGS) $(CPPFLAGS) $(OBJS) -o $(TARGET)
 
 # compile an object based on source and headers
-bin/%.o: source/%.cpp $(HDRS) makefile
+bin/%.o: source/%.cpp $(HDRS)
 	@mkdir -p bin
 	$(CC) $(CXXFLAGS) $(CPPFLAGS) -c $< -o $@
 
